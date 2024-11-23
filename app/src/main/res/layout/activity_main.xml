@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ListView
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoadData"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLoadData"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:text="Load Data"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf=" parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="@id/btnLoadData"
+        android:background="#A8A8A8"
+        android:layout_width="wrap_content"
+        android:id="@+id/progressIndicator"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:indeterminate="true"
+        app:trackThickness="10dp"
+        app:trackCornerRadius="5dp"
+        app:indicatorSize="60dp"
+        android:padding="10dp"
+        app:indicatorColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
